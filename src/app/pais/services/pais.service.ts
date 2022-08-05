@@ -23,4 +23,10 @@ export class PaisService {
       console.log('Buscando...');
       return this.http.get<Country[]>( url );
    }
+
+   paisPorId( id: string){
+      const url = `${this.apiUrl}/alpha/${id}`
+      console.log('Buscando...');
+      return this.http.get<Country>( url );
+   }
 }
